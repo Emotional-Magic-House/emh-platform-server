@@ -13,7 +13,6 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
-    "@tencent/eslint-config-tencent": "^1.1.3",
     "body-parser": "^1.19.1",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
