@@ -1,4 +1,4 @@
-const { Sequelize, DataTypes } = require('sequelize');
+const { Sequelize } = require('sequelize');
 const { createUserModule } = require('./dao/user');
 const { createCounterModule } = require('./dao/counter');
 
