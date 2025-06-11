@@ -1,8 +1,8 @@
 {
-  "name": "wxcloudrun-koa",
+  "name": "emotional-magic-house-koa",
   "version": "1.0.0",
-  "description": "微信云托管 koa 框架模板",
-  "main": "index.js",
+  "description": "心情奇妙屋",
+  "main": "built/index.js",
   "scripts": {
     "start": "node ./built/index.js",
     "dev": "npx nodemon",
