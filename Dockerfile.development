@@ -10,4 +10,4 @@ RUN npm config set registry https://mirrors.cloud.tencent.com/npm/
 RUN npm install
 COPY . /app
 
-CMD [ "npm", "dev" ]
+CMD [ "npm", "run", "dev" ]

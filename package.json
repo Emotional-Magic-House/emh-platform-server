@@ -1,5 +1,5 @@
 {
-  "name": "emotional-magic-house-koa",
+  "name": "emh-platform-server",
   "version": "1.0.0",
   "description": "心情奇妙屋",
   "main": "built/index.js",
