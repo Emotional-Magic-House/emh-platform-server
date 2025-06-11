@@ -1,7 +1,7 @@
-const { Sequelize, DataTypes } = require("sequelize");
+import { Sequelize, DataTypes } from 'sequelize';
 
-function createUserModule(sequelize) {
-  const User = sequelize.define('User', {
+export function createUserModule(sequelize: Sequelize) {
+  const user = sequelize.define('User', {
     // 定义字段
     id: {
       type: DataTypes.INTEGER,
@@ -26,25 +26,21 @@ function createUserModule(sequelize) {
       type: DataTypes.STRING(29),
       allowNull: false,
       unique: true,
-      default: ''
+      // default: ''
     },
     phone: {
       type: DataTypes.INTEGER.UNSIGNED,
       allowNull: true,
-      default: ''
+      // default: ''
     },
     freeze: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      default: 0
-    }
+      // default: 0
+    },
   }, {
     tableName: 'users',  // 指定表名，默认是模型名复数
     timestamps: true,    // 自动添加 createdAt 和 updatedAt 字段
   });
-  return User;
-}
-
-module.exports = {
-  createUserModule
+  return user;
 }

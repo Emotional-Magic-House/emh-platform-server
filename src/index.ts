@@ -1,8 +1,9 @@
-const Koa = require('koa');
-const logger = require('koa-logger');
-const bodyParser = require('koa-bodyparser');
-const { init: initDB } = require('./db');
-const { registerRouter } = require('./router');
+import Koa from 'koa';
+import logger from 'koa-logger';
+import bodyParser from 'koa-bodyparser';
+import { initDB } from './db';
+import { registerRouter } from './router';
+
 
 const port = process.env.PORT || 80;
 
@@ -17,7 +18,7 @@ async function bootstrap() {
     .use(logger())
     .use(bodyParser())
     .use(async (ctx, next) => {
-      ctx.db = { ...models };
+      ctx.state.db = { ...models };
       await next();
     })
     .use(router.routes())
